@@ -6,7 +6,7 @@
   font-weight: 400;
   font-style: normal;
 }
-:root{
+:root {
   font-size: 12px;
   --soft-violet: hsl(273, 75%, 66%);
   --soft-blue: hsl(240, 73%, 65%);
@@ -14,18 +14,20 @@
   --dark-grayish-blue: hsl(240, 6%, 50%);
 }
 /* Define general classes */
-.display-flex-center{
+.display-flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-*, *::before, *::after{
+*,
+*::before,
+*::after {
   /* border: 1px solid; */
   box-sizing: border-box;
 }
 /* set body styles */
-body{
-  font-family: 'Kumbn Sans', sans-serif;
+body {
+  font-family: "Kumbn Sans", sans-serif;
   font-size: 1rem;
 }
 /* Set the container styles */
@@ -35,10 +37,14 @@ body{
   text-align: center;
   min-height: 100vh;
   padding: 0 30px;
-  background: linear-gradient(180deg, var(--soft-violet, hsl(0, 0%, 100%)), var(--soft-blue, hsl(0, 0%, 100%)));
+  background: linear-gradient(
+    180deg,
+    var(--soft-violet, hsl(0, 0%, 100%)),
+    var(--soft-blue, hsl(0, 0%, 100%))
+  );
 }
 /* Set the main container styles */
-.main-container{
+.main-container {
   flex-direction: column;
   width: 100%;
   background-color: hsl(0, 0%, 100%);
@@ -48,32 +54,32 @@ body{
   padding: 50px 25px;
   box-shadow: 0px 20px 40px var(--very-dark-grayish-blue, hsl(0, 0%, 29%));
 }
-.intro-img{
+.intro-img {
   margin-top: -160px;
   height: 220px;
 }
-.intro-img::before{
+.intro-img::before {
   content: url(../images/illustration-woman-online-mobile.svg);
 }
-.intro-img::after{
+.intro-img::after {
   content: url(../images/bg-pattern-mobile.svg);
   display: inline-block;
   transform: translateY(-70%);
 }
-.questions-list{
+.questions-list {
   width: 100%;
   list-style: none;
   margin: 0;
   padding: 0;
   text-align: left;
 }
-.questions-list li{
+.questions-list li {
   border-bottom: 1px solid var(--dark-grayish-blue, hsl(0, 0%, 0%));
 }
-.questions-list li label.question{
+.questions-list li label.question {
   color: var(--very-dark-grayish-blue);
 }
-.questions-list li label.question{
+.questions-list li label.question {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -82,33 +88,34 @@ body{
   cursor: pointer;
 }
 /* set list styles */
-input, ul li p{
+input,
+ul li p {
   display: none;
   margin-top: 0;
 }
-.questions-list .question:has( + input:checked){
+.questions-list .question:has(+ input:checked) {
   font-weight: 700;
 }
-.questions-list > li > input:checked ~ p{
+.questions-list > li > input:checked ~ p {
   display: block;
   color: var(--dark-grayish-blue, hsl(0, 0%, 0%));
 }
-.questions-list .question:has( + input:checked) img{
+.questions-list .question:has(+ input:checked) img {
   transform: rotate(180deg);
 }
 /* Set footer styles */
-footer{
+footer {
   position: absolute;
   bottom: 0;
   padding: 20px;
 }
-.attribution a{
+.attribution a {
   color: hsl(0, 0%, 100%);
   text-decoration: none;
 }
-
-@media (min-width: 700px){
-  .main-container{
+/* Add breakpoints for large screen */
+@media (min-width: 700px) {
+  .main-container {
     flex-direction: row;
     width: auto;
     text-align: left;
@@ -117,23 +124,23 @@ footer{
     padding-right: 60px;
     position: relative;
   }
-  .main-container .intro-img{
+  .main-container .intro-img {
     margin: 0;
     width: 400px;
     height: 430px;
     overflow: hidden;
   }
-  .intro-img::before{
+  .intro-img::before {
     content: url("../images/bg-pattern-desktop.svg");
     transform: translateX(-57%) translateY(-34%) scale(0.8);
     display: inline-block;
   }
-  .intro-img::after{
+  .intro-img::after {
     content: url("../images/illustration-woman-online-desktop.svg");
     transform: translateX(-22%) translateY(-255%) scale(0.8);
     display: inline-block;
   }
-  .main-container::before{
+  .main-container::before {
     content: url(../images/illustration-box-desktop.svg);
     position: absolute;
     left: -80px;
@@ -141,12 +148,12 @@ footer{
     top: 35%;
     transform: scale(0.8);
   }
-  section{
+  section {
     width: 300px;
     padding-bottom: 60px;
     padding-top: 40px;
   }
-  .questions-list .question:hover{
+  .questions-list .question:hover {
     color: hsl(0, 82%, 46%);
   }
 }
