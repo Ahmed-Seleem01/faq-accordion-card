@@ -11,6 +11,12 @@
   --soft-violet: hsl(273, 75%, 66%);
   --soft-blue: hsl(240, 73%, 65%);
 }
+/* Define general classes */
+.display-flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 *, *::before, *::after{
   border: 1px solid;
   box-sizing: border-box;
@@ -22,26 +28,27 @@ body{
 }
 /* Set the container styles */
 .container {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
   min-height: 100vh;
   padding: 0 30px;
   background: linear-gradient(180deg, var(--soft-violet, hsl(0, 0%, 100%)), var(--soft-blue, hsl(0, 0%, 100%)));
 }
+/* Set the main container styles */
+.main-container{
+  flex-direction: column;
+  width: 100%;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 30px;
+  margin-top: 150px;
+  padding: 0 25px;
+}
 
 /* set list styles */
-label{
-  display: inline-block;
-  padding: 20px 0;
-  cursor: pointer;
-}
 input, ul li p{
   display: none;
 }
 .questions-list > li > input:checked ~ p{
   display: block;
-  color: red;
+  color: ;
 }
