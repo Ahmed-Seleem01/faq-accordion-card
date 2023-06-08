@@ -8,16 +8,30 @@
 }
 :root{
   font-size: 12px;
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
 }
 *, *::before, *::after{
+  border: 1px solid;
   box-sizing: border-box;
 }
 /* set body styles */
 body{
-  min-height: 100vh;
   font-family: 'Kumbn Sans', sans-serif;
   font-size: 1rem;
 }
+/* Set the container styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  padding: 0 30px;
+  background: linear-gradient(180deg, var(--soft-violet, hsl(0, 0%, 100%)), var(--soft-blue, hsl(0, 0%, 100%)));
+}
+
 /* set list styles */
 label{
   display: inline-block;
