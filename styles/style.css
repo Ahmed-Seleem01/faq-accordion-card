@@ -18,3 +18,16 @@ body{
   font-family: 'Kumbn Sans', sans-serif;
   font-size: 1rem;
 }
+/* set list styles */
+label{
+  display: inline-block;
+  padding: 20px 0;
+  cursor: pointer;
+}
+input, ul li p{
+  display: none;
+}
+.questions-list > li > input:checked ~ p{
+  display: block;
+  color: red;
+}
