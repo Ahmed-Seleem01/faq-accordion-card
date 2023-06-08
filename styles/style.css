@@ -73,3 +73,6 @@ input, ul li p{
   display: block;
   color: ;
 }
+.questions-list .question:has( + input:checked) img{
+  transform: rotate(180deg);
+}
